@@ -76,7 +76,7 @@ const LoginPage = () => {
 
         <div className='flex items-center gap-2 font-semibold text-gray-500 hover:text-black duration-200 py-2 border border-gray-400 rounded-full justify-center shadow'>
           <FcGoogle />
-          <p onClick={handleGoogleSignIn}>continue with Google</p>
+          <button onClick={handleGoogleSignIn}>continue with Google</button>
         </div>
         <div className='flex gap-2 font-semibold'>
           <h1 >Dont’t Have An Account ?</h1>
