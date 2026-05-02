@@ -6,7 +6,7 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 
 const Banner = () => {
   return (
-    <div className=" mb-10">
+    <div className="">
       <div className="relative min-h-[70vh]  overflow-hidden">
 
         {/* Background Image */}
