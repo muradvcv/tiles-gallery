@@ -37,6 +37,13 @@ const RegisterPage = () => {
 
   }
 
+  // login with google
+  const handleGoogleSignIn=async()=>{
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+  }
+
 
 
   const [showpass, setShowpass] = useState(false)
@@ -110,12 +117,12 @@ const RegisterPage = () => {
 
         <div className='flex items-center gap-2 font-semibold text-gray-500 hover:text-black duration-200 py-2 border border-gray-400 rounded-full justify-center shadow'>
           <FcGoogle />
-          <p>continue with Google</p>
+          <p onClick={handleGoogleSignIn}>continue with Google</p>
         </div>
 
         <div className='flex gap-2 font-semibold py-4'>
           <h1 className=''>Already Have An Account ?</h1>
-          <h1 className='text-[#f63131] underline'><Link href={'/login'}>Login</Link></h1>
+          <h1 className='text-[#f63131] underline'><Link href={'/login'}>Register</Link></h1>
         </div>
       </div>
     </div>
