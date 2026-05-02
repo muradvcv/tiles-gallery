@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 
@@ -65,7 +66,10 @@ const TopGenaration = async () => {
                   </p>
 
                   <button className="w-full mt-3 border border-gray-300 rounded-lg py-2 text-sm font-medium hover:bg-gray-100 transition">
-                    View Details
+                    <Link href={`/all-tiles/${topt.id}`} >
+                      View Details
+                    </Link>
+
                   </button>
 
                 </div>
