@@ -25,8 +25,7 @@ const RegisterPage = () => {
       image:photo,
       callbackURL: "/",
     })
-    console.log(res,error,'aaaaaaaaaa');
-
+   
     if (error) {
       toast.error(error?.message || "Something went wrong");
     } else {

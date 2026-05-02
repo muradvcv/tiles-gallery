@@ -20,8 +20,7 @@ const LoginPage = () => {
        rememberMe: true,
        callbackURL: "/",
      });
-     console.log(res,error,'aaaaaaaaaa');
- 
+    
      if (error) {
        toast.error(error?.message || "Something went wrong");
      } else {
@@ -29,15 +28,12 @@ const LoginPage = () => {
      }
  
    }
- 
-
 
 
   const [showpass, setShowpass] = useState(false)
   return (
     <div className='w-10/12 mx-auto  min-h-[90vh] flex justify-center items-center rounded-2xl my-10'>
       <div className='bg-white w-120 shadow-md rounded-xl p-10 space-y-2 border border-gray-200'>
-        <h1 className='text-2xl text-center font-semibold pb-5 border-b border-b-gray-300'>Login your account</h1>
 
         <form action="" onSubmit={handleSubmit(handleLogin)}>
           <fieldset className="fieldset">
