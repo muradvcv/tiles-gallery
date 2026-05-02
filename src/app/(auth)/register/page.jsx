@@ -7,13 +7,11 @@ import { FaEye } from 'react-icons/fa6';
 import { FcGoogle } from 'react-icons/fc';
 import { IoMdEyeOff } from 'react-icons/io';
 import { toast } from 'react-toastify';
-import { useRouter } from "next/navigation";
 
 const RegisterPage = () => {
 
   // go direct route
-  const router = useRouter();
-
+  
   const { register, handleSubmit, watch, formState: { errors }, } = useForm()
   const handleLogin = async(data) => {
    const {name,photo,email,password}=data;
@@ -29,12 +27,9 @@ const RegisterPage = () => {
     if (error) {
       toast.error(error?.message || "Something went wrong");
     } else {
-      toast.success("Registration successful");
+      toast.success("Registration successful click to login");
     }
-    setTimeout(() => {
-      router.push("/");
-    }, 1000);
-
+   
   }
 
   // login with google
