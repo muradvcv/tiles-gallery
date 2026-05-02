@@ -36,7 +36,7 @@ const Navbar = () => {
                 className="w-10 h-auto"
               />
             </Link>
-            <h1 className='text-md md:text-2xl'>Tiles Gallery</h1>
+            <h1 className='text-md md:text-2xl whitespace-nowrap'>Tiles Gallery</h1>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
