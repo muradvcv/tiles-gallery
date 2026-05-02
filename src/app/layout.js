@@ -1,7 +1,9 @@
-import { Geist, Geist_Mono, Roboto_Condensed, Roboto_Slab } from "next/font/google";
+
+import { Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ToastContainer } from "react-toastify";
 
 const roboto = Roboto_Slab({
   variable: "--roboto",
@@ -22,6 +24,7 @@ export default function RootLayout({ children }) {
     >
       <body className={`${roboto.className}`}>
         <Navbar/>
+        <ToastContainer />
         {children}
         <Footer/>
         </body>

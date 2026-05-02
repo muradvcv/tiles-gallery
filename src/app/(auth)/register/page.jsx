@@ -1,19 +1,40 @@
 "use client"
+import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye } from 'react-icons/fa6';
 import { FcGoogle } from 'react-icons/fc';
 import { IoMdEyeOff } from 'react-icons/io';
+import { toast } from 'react-toastify';
+import { useRouter } from "next/navigation";
 
 const RegisterPage = () => {
 
+  // go direct route
+  const router = useRouter();
+
   const { register, handleSubmit, watch, formState: { errors }, } = useForm()
-
-  const handleLogin = (data) => {
-
+  const handleLogin = async(data) => {
    const {name,photo,email,password}=data;
-   console.log(name,photo,email,password,'allll');
+
+    const { data:res, error } =await authClient.signUp.email({
+      name:name,
+      email:email,
+      password:password,
+      image:photo,
+      callbackURL: "/",
+    })
+    console.log(res,error,'aaaaaaaaaa');
+
+    if (error) {
+      toast.error(error?.message || "Something went wrong");
+    } else {
+      toast.success("Registration successful");
+    }
+    setTimeout(() => {
+      router.push("/");
+    }, 1000);
 
   }
 

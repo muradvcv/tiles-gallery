@@ -1,18 +1,35 @@
 "use client"
+import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye } from 'react-icons/fa6';
 import { FcGoogle } from 'react-icons/fc';
 import { IoMdEyeOff } from 'react-icons/io';
+import { toast } from 'react-toastify';
 
 const LoginPage = () => {
 
   const {register,handleSubmit,watch,formState: { errors },} = useForm()
 
-  const handleLogin = (data) => {
-    
-  }
+   const handleLogin = async(data) => {
+    const {email,password}=data;
+     const { data:res, error } = await authClient.signIn.email({
+       email:email,
+       password:password,
+       rememberMe: true,
+       callbackURL: "/",
+     });
+     console.log(res,error,'aaaaaaaaaa');
+ 
+     if (error) {
+       toast.error(error?.message || "Something went wrong");
+     } else {
+       toast.success("Login successful");
+     }
+ 
+   }
+ 
 
 
 

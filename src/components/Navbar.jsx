@@ -5,10 +5,11 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import Logo from '@/assets/logo.png'
 import Link from 'next/link';
 import Navlink from './Navlink';
+import { authClient } from '@/lib/auth-client';
 
 const Navbar = () => {
 
- 
+  const { data: session } = authClient.useSession()
 
 
   return (
