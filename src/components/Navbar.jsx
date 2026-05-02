@@ -22,19 +22,18 @@ const Navbar = () => {
               tabIndex="-1"
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
               <li><Link href={'/'}>Home</Link></li>
-              <li><Link href={'all-tiles'}>ALl tils</Link></li>
+              <li><Link href={'all-tiles'}>All tiles</Link></li>
               <li><Link href={'my-profile'}>My Profile</Link></li>
               
             </ul>
           </div>
           <div className='flex gap-1 items-center font-semibold '>
             <Link href={'/'}>
-            <Image
-              src={Logo}
-              width={50}
-              height={50}
-              alt=''
-            />
+              <Image
+                src={Logo}
+                alt="Logo"
+                className="w-10 h-auto"
+              />
             </Link>
             <h1 className='text-md md:text-2xl'>Tiles Gallery</h1>
           </div>
@@ -42,7 +41,7 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li><Link href={'/'}>Home</Link></li>
-            <li><Link href={'all-tiles'}>ALl tils</Link></li>
+            <li><Link href={'all-tiles'}>All tiles</Link></li>
             <li><Link href={'my-profile'}>My Profile</Link></li>
           </ul>
         </div>
