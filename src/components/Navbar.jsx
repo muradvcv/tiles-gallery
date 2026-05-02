@@ -4,6 +4,7 @@ import React from 'react';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import Logo from '@/assets/logo.png'
 import Link from 'next/link';
+import Navlink from './Navlink';
 
 const Navbar = () => {
 
@@ -21,9 +22,9 @@ const Navbar = () => {
             <ul
               tabIndex="-1"
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-              <li><Link href={'/'}>Home</Link></li>
-              <li><Link href={'all-tiles'}>All tiles</Link></li>
-              <li><Link href={'my-profile'}>My Profile</Link></li>
+              <li><Navlink href={'/'}>Home</Navlink></li>
+              <li><Navlink href={'/all-tiles'}>All tiles</Navlink></li>
+              <li><Navlink href={'/my-profile'}>My Profile</Navlink></li>
               
             </ul>
           </div>
@@ -40,9 +41,9 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li><Link href={'/'}>Home</Link></li>
-            <li><Link href={'all-tiles'}>All tiles</Link></li>
-            <li><Link href={'my-profile'}>My Profile</Link></li>
+            <li><Navlink href={'/'}>Home</Navlink></li>
+            <li><Navlink href={'/all-tiles'}>All tiles</Navlink></li>
+            <li><Navlink href={'/my-profile'}>My Profile</Navlink></li>
           </ul>
         </div>
         <div className="navbar-end flex gap-2">
