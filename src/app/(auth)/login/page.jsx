@@ -41,7 +41,7 @@ const LoginPage = () => {
     <div className='w-10/12 mx-auto  min-h-[90vh] flex justify-center items-center rounded-2xl my-10'>
       <div className='bg-white w-120 shadow-md rounded-xl p-10 space-y-2 border border-gray-200'>
         <h1 className='text-2xl text-center font-semibold pb-5 border-b border-b-gray-300'>Login your account</h1>
-        <form action="" onSubmit={handleSubmit(handleLogin)}>
+        <form  onSubmit={handleSubmit(handleLogin)}>
           <fieldset className="fieldset">
             <legend className="fieldset-legend text-[1rem]">Email</legend>
 
@@ -76,7 +76,7 @@ const LoginPage = () => {
 
         <div className='flex items-center gap-2 font-semibold text-gray-500 hover:text-black duration-200 py-2 border border-gray-400 rounded-full justify-center shadow'>
           <FcGoogle />
-          <button onClick={handleGoogleSignIn}>continue with Google</button>
+          <button className='btn' onClick={handleGoogleSignIn}>continue with Google</button>
         </div>
         <div className='flex gap-2 font-semibold'>
           <h1 >Dont’t Have An Account ?</h1>

@@ -52,7 +52,7 @@ const RegisterPage = () => {
       <div className='bg-white w-120 shadow-md rounded-xl py-2 px-10 space-y-2  border border-gray-200'>
         <h1 className='text-2xl text-center font-semibold pb-2 border-b border-b-gray-300'>Register your account</h1>
 
-        <form action="" onSubmit={handleSubmit(handleLogin)}>
+        <form  onSubmit={handleSubmit(handleLogin)}>
           {/* name */}
           <fieldset className="fieldset">
             <legend className="fieldset-legend text-[1rem]">Name</legend>
@@ -110,14 +110,14 @@ const RegisterPage = () => {
             <span className='absolute right-2 top-4.5' onClick={() => setShowpass(!showpass)}>{showpass ? <FaEye /> : <IoMdEyeOff />}</span>
           </fieldset>
 
-          <button className='w-full btn btn-neutral my-5'>Login</button>
+          <button className='w-full btn btn-neutral my-5'>Register</button>
         </form>
 
         <p className='text-center'>or</p>
 
         <div className='flex items-center gap-2 font-semibold text-gray-500 hover:text-black duration-200 py-2 border border-gray-400 rounded-full justify-center shadow'>
           <FcGoogle />
-          <button onClick={handleGoogleSignIn}>continue with Google</button>
+          <button className='btn' onClick={handleGoogleSignIn}>continue with Google</button>
         </div>
 
         <div className='flex gap-2 font-semibold py-4'>
