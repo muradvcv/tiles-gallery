@@ -21,8 +21,8 @@ const RegisterPage = () => {
 
   const [showpass, setShowpass] = useState(false)
   return (
-    <div className='w-10/12 mx-auto  min-h-[90vh] flex justify-center items-center shadow bg-slate-100 rounded-2xl my-10'>
-      <div className='bg-white w-120 shadow-md rounded-xl py-2 px-10 space-y-2 '>
+    <div className='w-10/12 mx-auto  min-h-[90vh] flex justify-center items-center rounded-2xl my-10'>
+      <div className='bg-white w-120 shadow-md rounded-xl py-2 px-10 space-y-2  border border-gray-200'>
         <h1 className='text-2xl text-center font-semibold pb-2 border-b border-b-gray-300'>Register your account</h1>
 
         <form action="" onSubmit={handleSubmit(handleLogin)}>
