@@ -1,7 +1,8 @@
+import SarchBar from '@/components/SarchBar';
+import SarchWraper from '@/components/SarchWraper';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { CiSearch } from 'react-icons/ci';
 
 const Alltiles = async () => {
   const res = await fetch("https://tiles-gallery-zeta-one.vercel.app/data.json");
@@ -20,32 +21,9 @@ const Alltiles = async () => {
 
   return (
     <div className='w-10/12 mx-auto py-8 min-h-screen'>
-      {/* head text */}
-      <div className='text-center space-y-3'>
-        <h1 className=' text-5xl'>All Tiles</h1>
-        <p className='text-[#01326dc1]'>Explore our complete collection of primium tiles</p>
-      </div>
       {/* search bar */}
-
-      <div className="flex justify-center py-5">
-        <div className="join w-full max-w-2xl border rounded-md pl-2 border-gray-400">
-
-          <label className="join-item flex items-center gap-2 w-full 
-          border-0 border-b border-gray-300 rounded-none bg-transparent">
-            <CiSearch className="text-gray-500" />
-            <input
-              type="search"
-              placeholder="Search tiles..."
-              required
-              className="w-full bg-transparent outline-none focus:outline-none"
-            />
-          </label>
-          <button className="btn btn-neutral join-item px-6">
-            Search
-          </button>
-
-        </div>
-      </div>
+     <SarchWraper tiles={tiles}/>
+     
 
       {/* all tiles */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
