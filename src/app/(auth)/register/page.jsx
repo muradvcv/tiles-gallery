@@ -88,13 +88,10 @@ const RegisterPage = () => {
               className="input focus:border-none w-full"
               placeholder="Enter your photo link"
               {...register("photo", { required: true })}
-
             />
             {errors.photo && <span className='text-red-500'>This field is required</span>}
 
-
           </fieldset>
-
 
           <fieldset className="fieldset relative">
             <legend className="fieldset-legend text-[1rem]">Password</legend>
