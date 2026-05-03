@@ -1,16 +1,16 @@
-// import { createAuthClient } from "better-auth/react"
-// export const authClient = createAuthClient({
-//   /** The base URL of the server (optional if you're using the same domain) */
-//   baseURL:"https://tiles-gallery-zeta-one.vercel.app"
-// })
-// export const { signIn, signUp, useSession } = createAuthClient()
-
-
-import { createAuthClient } from "better-auth/react";
-
+import { createAuthClient } from "better-auth/react"
 export const authClient = createAuthClient({
-  baseURL: process.env.BETTER_AUTH_URL, 
-});
+  /** The base URL of the server (optional if you're using the same domain) */
+  baseURL:"https://tiles-gallery-zeta-one.vercel.app"
+})
+export const { signIn, signUp, useSession } = createAuthClient()
 
 
-export const { signIn, signUp, useSession } = authClient;
+// import { createAuthClient } from "better-auth/react";
+
+// export const authClient = createAuthClient({
+//   baseURL: "http://localhost:3000", // local dev
+// });
+
+
+// export const { signIn, signUp, useSession } = authClient;
