@@ -1,26 +1,27 @@
+import dns from "node:dns";
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
 import { NextResponse } from "next/server";
 import { auth } from "./lib/auth";
 import { headers } from "next/headers";
 
 export async function proxy(request) {
+  //   console.log(request, "request");
 
   const session = await auth.api.getSession({
-    headers: await headers()
-  })
+    headers: await headers(),
+  });
+  console.log(session, "session");
 
-  // console.log(session,'session');
+  //   const isLoggedIn = false;
 
-  // const isLogin=false;
   if (session) {
-
-    return NextResponse.next()
-
+    return NextResponse.next();
   }
 
-
-  return NextResponse.redirect(new URL('/login', request.url))
+  return NextResponse.redirect(new URL("/login", request.url));
 }
 
 export const config = {
-  matcher: ['/my-profile','/all-tiles/:path*'],
-}
+  matcher: ["/my-profile", "/all-tiles/:path*"],
+};
