@@ -114,7 +114,7 @@ const RegisterPage = () => {
 
         <div className='flex gap-2 font-semibold py-4'>
           <h1 className=''>Already Have An Account ?</h1>
-          <h1 className='text-[#f63131] underline'><Link href={'/login'}>Register</Link></h1>
+          <h1 className='text-[#f63131] underline'><Link href={'/login'}>Login</Link></h1>
         </div>
       </div>
     </div>
